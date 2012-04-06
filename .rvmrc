@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This is an RVM Project .rvmrc file, used to automatically load the ruby
+# development environment upon cd'ing into the directory
+
+environment_id="jruby-1.6.7@codingiam"
+
+rvmrc_rvm_version="1.11.6" # 1.10.1 seams as a safe start
+eval "$(echo ${rvm_version}.${rvmrc_rvm_version} | awk -F. '{print "[[ "$1*65536+$2*256+$3" -ge "$4*65536+$5*256+$6" ]]"}' )" || {
+  echo "This .rvmrc file requires at least RVM ${rvmrc_rvm_version}, aborting loading."
+  return 1
+}
+
+rvm --create use "$environment_id" || {
+  echo "Failed to create RVM environment '${environment_id}'."
+  return 1
+}

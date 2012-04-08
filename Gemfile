@@ -24,6 +24,11 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'warbler', '~> 1.3.5'
+  gem 'jruby-rack', '~> 1.1.5'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

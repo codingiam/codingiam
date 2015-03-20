@@ -36,9 +36,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :assets do
 end
 
-group :development, :test do
+group :development do
   gem 'warbler', '~> 1.4.5'
   gem 'jruby-rack', '~> 1.1.18'
+  gem 'rubocop'
+end
+
+group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -5,7 +5,7 @@
   :cljsbuild {
     :builds [{:source-paths ["app/assets/clojurescripts"]
               :notify-command ["notify-send"]
-              :compiler {:output-to "app/assets/javascripts/script.js"
+              :compiler {:output-to "app/assets/javascripts/main.js"
                          :output-dir "tmp/assets/javascripts"
                          :optimizations :simple
                          :output-wrapper true

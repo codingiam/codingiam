@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module CodingIAm
+module Codingiam
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -22,5 +22,19 @@ module CodingIAm
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Bower asset paths
+    # Rails.root.join('vendor', 'assets', 'bower_components').to_s.tap do |bower_path|
+    #   config.sass.load_paths << bower_path
+    #   # config.assets.paths << bower_path
+    # end
+
+    # Precompile Bootstrap fonts
+    config.assets.precompile << %r(bootstrap-sass/assets/fonts/bootstrap/[\w-]+\.(?:eot|svg|ttf|woff2?)$)
+
+    config.assets.precompile << 'modernizr/modernizr.js'
+
+    # Minimum Sass number precision required by bootstrap-sass
+    ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
   end
 end

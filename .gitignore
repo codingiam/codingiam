@@ -16,4 +16,8 @@
 !/log/.keep
 /tmp
 
-.idea
+/.idea
+
+/vendor/assets/bower_components
+
+/target

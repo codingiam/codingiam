@@ -11,10 +11,5 @@
  * file per style scope.
  *
  *= require_tree .
- *= require style
  *= require_self
  */
-
-body {
-    height: 100%;
-}

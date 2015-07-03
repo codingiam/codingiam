@@ -21,3 +21,5 @@
 /vendor/assets/bower_components
 
 /target
+
+.lein-repl-history

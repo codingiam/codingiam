@@ -6,7 +6,8 @@
                                       :notify-command ["notify-send"]
                                       :compiler {:output-to "app/assets/javascripts/codingiam.js"
                                                  :output-dir "tmp/assets/javascripts"
-                                                 :optimizations :simple
+                                                 :optimizations :none
+                                                 :main "codingiam"
                                                  :output-wrapper true
                                                  :print-input-delimiter true
                                                  :pretty-print true}}}})

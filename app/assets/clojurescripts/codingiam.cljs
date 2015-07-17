@@ -1,3 +1,3 @@
 (ns codingiam)
 
-(defn ^:export main [])
+(defn main [])

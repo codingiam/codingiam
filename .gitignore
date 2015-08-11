@@ -22,4 +22,5 @@
 
 /target
 
-.lein-repl-history
+/.lein-repl-history
+/figwheel_server.log
